@@ -1,0 +1,81 @@
+.filter {
+	margin: 50px auto 0;
+	max-width: 800px;
+	text-align: center;
+	font-size: 0;
+}
+
+	.input {
+		display: inline-block;
+		vertical-align: top;
+		width: 300px;
+		height: 40px;
+		margin: 0 20px 20px 0;
+		border: 1px solid #ccc;
+		box-sizing: border-box;
+		font: 14px Arial, sans-serif;
+		padding: 0 10px;
+		line-height: 40px;
+	}
+	
+	.input:focus {
+		outline: none;
+		box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+	}
+	
+	.select {
+		display: inline-block;
+		vertical-align: top;
+		width: 300px;
+		height: 40px;
+		margin: 0 20px 20px 0;
+		border: 1px solid #ccc;
+		box-sizing: border-box;
+		font: 14px Arial, sans-serif;
+		padding: 0 10px;
+	}
+	
+		.option {
+			
+		}
+	
+	.select:focus {
+		outline: none;
+	}
+	
+	.btn {
+		display: inline-block;
+		vertical-align: top;
+		width: 100px;
+		height: 40px;
+		margin: 0 20px 20px 0;
+		border: 0px;
+		box-sizing: border-box;
+		font: 14px Arial, sans-serif;
+		text-transform: uppercase;
+		background: lime;
+		color: #000;
+	}
+
+.table {
+	margin: 50px auto 0;
+	text-align: center;
+	border-collapse: collapse;
+}
+
+	.table td,
+	.table th	{
+		border: 1px solid #eee;
+		box-sizing: border-box;
+	}
+	
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
+	ul ul {
+		padding-left: 20px;
+	}

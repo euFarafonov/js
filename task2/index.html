@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Task 2</title>
+    <link href="css/normalize.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	<form id="filter" class="filter"></form>
+	<table id="table" class="table"></table>
+<script>
+window.onload = function() {
+    let filter = new Filter({
+        filterId: 'filter',
+		selectData: ['posts', 'comments', 'albums', 'photos', 'todos', 'users']
+    });
+};
+</script>
+<script src="js/js.js"></script>
+</body>
+</html>
