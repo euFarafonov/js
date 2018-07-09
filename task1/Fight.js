@@ -1,28 +1,20 @@
-import Fighter from "Fighter";
+import {Fighter} from "./fighter";
+import {ImprovedFighter} from "./improvedFighter";
 
-export async function fight(firstFighter, secondFighter, ...points) {
-  points.some(function(point) {
-    firstFighter.hit(secondFighter, point);
-    if (secondFighter.getHealt() < 0) {
-      console.log(secondFighter.getName());
-      secondFighter.knockout().then(function(result) {
-        console.log(
-          "GAME OVER! Winner=" +
-            firstFighter.getName() +
-            " WICH " +
-            firstFighter.getHealt() +
-            " Healt; Loser=" +
-            secondFighter.getName() +
-            " WICH " +
-            secondFighter.getHealt() +
-            " Healt."
-        );
-      });
-      return true;
-    }
-    const fight = firstFighter;
-    firstFighter = secondFighter;
-    secondFighter = fight;
-    return false;
-  });
+export async function Fight(fighter1, fighter2, ...points) {
+    points.forEach(function(point) {
+        fighter1.hit(fighter2, point);
+        
+        if (fighter2.getHealth() <= 0) {
+            fighter2.knockout()
+                .then(function() {
+                    console.log("Game over! Win = " + fighter1.getName());
+            });
+            return false;
+        }
+        
+        let temp = fighter1;
+        fighter1 = fighter2;
+        fighter2 = temp;
+    });
 }

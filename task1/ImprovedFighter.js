@@ -1,4 +1,4 @@
-import Fighter from "Fighter";
+import {Fighter} from "./fighter";
 
 export class ImprovedFighter extends Fighter {
 	doubleHit(enemy, point) {

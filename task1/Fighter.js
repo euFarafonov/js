@@ -23,4 +23,12 @@ export class Fighter {
 			}, 500);
 		});
 	}
+    
+    getHealth() {
+        return this.health;
+    }
+    
+    getName() {
+        return this.name;
+    }
 }
