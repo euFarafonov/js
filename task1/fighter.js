@@ -7,7 +7,7 @@ export class Fighter {
 	
 	setDamage(damage) {
 		this.health = this.health - damage;
-		console.log('health = ' + this.health);
+		console.log('health ' + this.name + ' = ' + this.health);
 	}
 	
 	hit(enemy, point) {
@@ -16,7 +16,7 @@ export class Fighter {
 	}
 	
 	knockout() {
-		return new Promise(function(resolve, reject) {
+		return new Promise(function(resolve) {
 			setTimeout(function() {
 				console.log("time is over");
 				resolve();
