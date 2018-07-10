@@ -1,17 +1,22 @@
-//Надо реализовать логику, которая позволит нам подписываться на наши кастомные события, и в будуще вызывать их.
-//Пример использования:
+import "babel-polyfill";
 
-const eventManager = new EventManager();
+import {EventManager} from "./eventManager";
 
-eventManager.addListener('moe luboe sobitie', function (data) {
-    console.log('first function: ', data);
-});
-eventManager.addListener('moe luboe sobitie', function (data) {
-    console.log('second function: ', data);
+let eventManager = new EventManager();
+
+eventManager.addListener("event1", function(data) {
+    console.log("func1: ", data);
 });
 
-eventManager.dispatch('moe luboe sobitie', data); // должно вызвать две верхние функции
+eventManager.addListener("event2", function(data) {
+    console.log("func2: ", data);
+});
 
-//Добавить возможность удалять события (очищать все функции).
-//Сделать EventManager синглтоном.
-//Сделать у EventManager публичным методы и свойства только addListener, dispatch, removeListener.
+eventManager.addListener("event1", function(data) {
+    console.log("func3: ", data);
+});
+
+eventManager.dispatch("event1", "123");
+console.log(eventManager);
+eventManager.removeListener("event2");
+console.log(eventManager);
